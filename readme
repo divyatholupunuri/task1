@@ -1,0 +1,24 @@
+Create docker Image in docker desktop
+docker images
+docker build -t php-webserver .
+docker run -p 80:80 php-webserver
+docker ps
+host website as local host
+-----------
+create repo in docker hub and push image to docker hub
+
+docker tag php-webserver divyatholupunuri/server
+docker login
+username
+password
+docker push divyatholupunuri/server
+
+--------------------
+Pull image from DockerHub to EC2
+
+docker login
+docker pull divyatholupunuri/server
+docker images
+docker run -d --name php-webserver2 -p 80:80 divyatholupunuri/server
+docker ps
+host webserver
